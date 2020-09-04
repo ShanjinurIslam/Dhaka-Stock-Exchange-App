@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,11 @@
 		2210DB1D250162A100459603 /* LatestPriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB1C250162A100459603 /* LatestPriceProvider.swift */; };
 		2210DB21250174A200459603 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB20250174A200459603 /* CompanyList.swift */; };
 		2210DB23250174FD00459603 /* CompanyListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB22250174FD00459603 /* CompanyListProvider.swift */; };
+		2210DB2625026B7F00459603 /* LatestPriceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB2525026B7F00459603 /* LatestPriceRow.swift */; };
+		2210DB2825026BE800459603 /* LatestPriceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB2725026BE800459603 /* LatestPriceHeader.swift */; };
+		2210DB2D25026F8100459603 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 2210DB2C25026F8100459603 /* SQLite */; };
+		2210DB3125026FAA00459603 /* MySharesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3025026FAA00459603 /* MySharesDatabase.swift */; };
+		2210DB332502733B00459603 /* MyShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB322502733B00459603 /* MyShare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,10 @@
 		2210DB1C250162A100459603 /* LatestPriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceProvider.swift; sourceTree = "<group>"; };
 		2210DB20250174A200459603 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		2210DB22250174FD00459603 /* CompanyListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListProvider.swift; sourceTree = "<group>"; };
+		2210DB2525026B7F00459603 /* LatestPriceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceRow.swift; sourceTree = "<group>"; };
+		2210DB2725026BE800459603 /* LatestPriceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceHeader.swift; sourceTree = "<group>"; };
+		2210DB3025026FAA00459603 /* MySharesDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharesDatabase.swift; sourceTree = "<group>"; };
+		2210DB322502733B00459603 /* MyShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2210DB2D25026F8100459603 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +85,7 @@
 		2210DAF52501569E00459603 /* DSExchange */ = {
 			isa = PBXGroup;
 			children = (
+				2210DB2425026B6A00459603 /* SupportingViews */,
 				2210DB1B2501628D00459603 /* Controller */,
 				2210DB152501604A00459603 /* Model */,
 				2210DB0A250158D400459603 /* DSExchange.entitlements */,
@@ -107,6 +118,7 @@
 			children = (
 				2210DB162501605E00459603 /* LatestPrice.swift */,
 				2210DB20250174A200459603 /* CompanyList.swift */,
+				2210DB322502733B00459603 /* MyShare.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,8 +128,18 @@
 			children = (
 				2210DB1C250162A100459603 /* LatestPriceProvider.swift */,
 				2210DB22250174FD00459603 /* CompanyListProvider.swift */,
+				2210DB3025026FAA00459603 /* MySharesDatabase.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2210DB2425026B6A00459603 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				2210DB2525026B7F00459603 /* LatestPriceRow.swift */,
+				2210DB2725026BE800459603 /* LatestPriceHeader.swift */,
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +158,9 @@
 			dependencies = (
 			);
 			name = DSExchange;
+			packageProductDependencies = (
+				2210DB2C25026F8100459603 /* SQLite */,
+			);
 			productName = DSExchange;
 			productReference = 2210DAF32501569E00459603 /* DSExchange.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 2210DAEA2501569E00459603;
+			packageReferences = (
+				2210DB2B25026F8100459603 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 2210DAF42501569E00459603 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,11 +220,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2210DAF72501569E00459603 /* AppDelegate.swift in Sources */,
+				2210DB332502733B00459603 /* MyShare.swift in Sources */,
 				2210DB172501605E00459603 /* LatestPrice.swift in Sources */,
 				2210DAF92501569E00459603 /* SceneDelegate.swift in Sources */,
 				2210DB0C25015A0100459603 /* CompanyListView.swift in Sources */,
 				2210DB21250174A200459603 /* CompanyList.swift in Sources */,
 				2210DB1D250162A100459603 /* LatestPriceProvider.swift in Sources */,
+				2210DB3125026FAA00459603 /* MySharesDatabase.swift in Sources */,
+				2210DB2625026B7F00459603 /* LatestPriceRow.swift in Sources */,
+				2210DB2825026BE800459603 /* LatestPriceHeader.swift in Sources */,
 				2210DB1225015D8F00459603 /* SearchView.swift in Sources */,
 				2210DB1425015DB100459603 /* MySharesView.swift in Sources */,
 				2210DB1025015D7E00459603 /* LatestPriceView.swift in Sources */,
@@ -402,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2210DB2B25026F8100459603 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2210DB2C25026F8100459603 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2210DB2B25026F8100459603 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2210DAEB2501569E00459603 /* Project object */;
 }
