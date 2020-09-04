@@ -12,16 +12,22 @@ import SQLite
 
 class MySharesDatabase{
     private var db:Connection!
-    var shares:Table!
-    var id:Expression<Int64>
-    var instrument:Expression<String>
-    var total:Expression<Int>
-    var saleable:Expression<Int>
-    var cost:Expression<Double>
-    var totalcost:Expression<Double>
+    private var shares:Table!
+    private var id:Expression<Int64>
+    private var instrument:Expression<String>
+    private var total:Expression<Int>
+    private var saleable:Expression<Int>
+    private var cost:Expression<Double>
+    private var totalcost:Expression<Double>
+    
+    static var shared = MySharesDatabase() // singleton
     
     init() {
-        db = try? Connection("db.sqlite3")
+        let path = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true
+        ).first!
+
+        db = try? Connection("\(path)/db.sqlite3")
         shares = Table("shares")
         id = Expression<Int64>("id")
         instrument = Expression<String>("instrument")
@@ -41,6 +47,7 @@ class MySharesDatabase{
     }
     
     func addShare(myshare:MyShare)->MyShare{
+        print(myshare)
         let insert = shares.insert(or: .replace,instrument <- myshare.instrument,total<-myshare.total,saleable<-myshare.saleable,cost<-myshare.cost,totalcost<-myshare.totalcost)
         
         let rowid = try! db.run(insert)

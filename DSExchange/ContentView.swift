@@ -24,12 +24,6 @@ struct ContentView: View {
                         Spacer()
                     }.padding()
                 }
-                NavigationLink(destination:SearchView()){
-                    HStack{
-                        Text("Search Company").foregroundColor(.white)
-                        Spacer()
-                    }.padding()
-                }
                 NavigationLink(destination:CompanyListView()){
                     HStack{
                         Text("View all").foregroundColor(.white)

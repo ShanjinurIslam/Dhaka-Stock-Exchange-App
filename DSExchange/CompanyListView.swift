@@ -18,7 +18,7 @@ struct CompanyListView: View {
     var body: some View {
         List{
             ForEach(provider.companies) {company in
-                NavigationLink(destination:CompanyDetailsView()){
+                NavigationLink(destination:CompanyDetailsView(name:company.name)){
                     Text(company.name)
                 }
             }

@@ -16,7 +16,6 @@
 		2210DB0C25015A0100459603 /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB0B25015A0100459603 /* CompanyListView.swift */; };
 		2210DB0E25015C5700459603 /* CompanyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB0D25015C5600459603 /* CompanyDetailsView.swift */; };
 		2210DB1025015D7E00459603 /* LatestPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB0F25015D7E00459603 /* LatestPriceView.swift */; };
-		2210DB1225015D8F00459603 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB1125015D8F00459603 /* SearchView.swift */; };
 		2210DB1425015DB100459603 /* MySharesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB1325015DB100459603 /* MySharesView.swift */; };
 		2210DB172501605E00459603 /* LatestPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB162501605E00459603 /* LatestPrice.swift */; };
 		2210DB1D250162A100459603 /* LatestPriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB1C250162A100459603 /* LatestPriceProvider.swift */; };
@@ -27,6 +26,12 @@
 		2210DB2D25026F8100459603 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 2210DB2C25026F8100459603 /* SQLite */; };
 		2210DB3125026FAA00459603 /* MySharesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3025026FAA00459603 /* MySharesDatabase.swift */; };
 		2210DB332502733B00459603 /* MyShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB322502733B00459603 /* MyShare.swift */; };
+		2210DB35250277FF00459603 /* CompanyDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB34250277FF00459603 /* CompanyDetailsProvider.swift */; };
+		2210DB372502781800459603 /* CompanyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB362502781800459603 /* CompanyDetails.swift */; };
+		2210DB3A25027C5400459603 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3925027C5400459603 /* ActivityIndicator.swift */; };
+		2210DB3C2502800400459603 /* BasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3B2502800400459603 /* BasicInfoView.swift */; };
+		2210DB3E2502825C00459603 /* MarketInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3D2502825C00459603 /* MarketInfoView.swift */; };
+		2210DB40250285F600459603 /* AddShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3F250285F600459603 /* AddShareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +47,6 @@
 		2210DB0B25015A0100459603 /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListView.swift; sourceTree = "<group>"; };
 		2210DB0D25015C5600459603 /* CompanyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsView.swift; sourceTree = "<group>"; };
 		2210DB0F25015D7E00459603 /* LatestPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceView.swift; sourceTree = "<group>"; };
-		2210DB1125015D8F00459603 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2210DB1325015DB100459603 /* MySharesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharesView.swift; sourceTree = "<group>"; };
 		2210DB162501605E00459603 /* LatestPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPrice.swift; sourceTree = "<group>"; };
 		2210DB1C250162A100459603 /* LatestPriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceProvider.swift; sourceTree = "<group>"; };
@@ -52,6 +56,12 @@
 		2210DB2725026BE800459603 /* LatestPriceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPriceHeader.swift; sourceTree = "<group>"; };
 		2210DB3025026FAA00459603 /* MySharesDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharesDatabase.swift; sourceTree = "<group>"; };
 		2210DB322502733B00459603 /* MyShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShare.swift; sourceTree = "<group>"; };
+		2210DB34250277FF00459603 /* CompanyDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsProvider.swift; sourceTree = "<group>"; };
+		2210DB362502781800459603 /* CompanyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetails.swift; sourceTree = "<group>"; };
+		2210DB3925027C5400459603 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2210DB3B2502800400459603 /* BasicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoView.swift; sourceTree = "<group>"; };
+		2210DB3D2502825C00459603 /* MarketInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInfoView.swift; sourceTree = "<group>"; };
+		2210DB3F250285F600459603 /* AddShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		2210DAF52501569E00459603 /* DSExchange */ = {
 			isa = PBXGroup;
 			children = (
+				2210DB3825027C3800459603 /* UIKitIntegration */,
 				2210DB2425026B6A00459603 /* SupportingViews */,
 				2210DB1B2501628D00459603 /* Controller */,
 				2210DB152501604A00459603 /* Model */,
@@ -99,7 +110,6 @@
 				2210DB0B25015A0100459603 /* CompanyListView.swift */,
 				2210DB0D25015C5600459603 /* CompanyDetailsView.swift */,
 				2210DB0F25015D7E00459603 /* LatestPriceView.swift */,
-				2210DB1125015D8F00459603 /* SearchView.swift */,
 				2210DB1325015DB100459603 /* MySharesView.swift */,
 			);
 			path = DSExchange;
@@ -119,6 +129,7 @@
 				2210DB162501605E00459603 /* LatestPrice.swift */,
 				2210DB20250174A200459603 /* CompanyList.swift */,
 				2210DB322502733B00459603 /* MyShare.swift */,
+				2210DB362502781800459603 /* CompanyDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 				2210DB1C250162A100459603 /* LatestPriceProvider.swift */,
 				2210DB22250174FD00459603 /* CompanyListProvider.swift */,
 				2210DB3025026FAA00459603 /* MySharesDatabase.swift */,
+				2210DB34250277FF00459603 /* CompanyDetailsProvider.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,8 +150,19 @@
 			children = (
 				2210DB2525026B7F00459603 /* LatestPriceRow.swift */,
 				2210DB2725026BE800459603 /* LatestPriceHeader.swift */,
+				2210DB3B2502800400459603 /* BasicInfoView.swift */,
+				2210DB3D2502825C00459603 /* MarketInfoView.swift */,
+				2210DB3F250285F600459603 /* AddShareView.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		2210DB3825027C3800459603 /* UIKitIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				2210DB3925027C5400459603 /* ActivityIndicator.swift */,
+			);
+			path = UIKitIntegration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,15 +244,20 @@
 			files = (
 				2210DAF72501569E00459603 /* AppDelegate.swift in Sources */,
 				2210DB332502733B00459603 /* MyShare.swift in Sources */,
+				2210DB3A25027C5400459603 /* ActivityIndicator.swift in Sources */,
 				2210DB172501605E00459603 /* LatestPrice.swift in Sources */,
+				2210DB40250285F600459603 /* AddShareView.swift in Sources */,
 				2210DAF92501569E00459603 /* SceneDelegate.swift in Sources */,
 				2210DB0C25015A0100459603 /* CompanyListView.swift in Sources */,
 				2210DB21250174A200459603 /* CompanyList.swift in Sources */,
+				2210DB372502781800459603 /* CompanyDetails.swift in Sources */,
+				2210DB3C2502800400459603 /* BasicInfoView.swift in Sources */,
 				2210DB1D250162A100459603 /* LatestPriceProvider.swift in Sources */,
+				2210DB3E2502825C00459603 /* MarketInfoView.swift in Sources */,
+				2210DB35250277FF00459603 /* CompanyDetailsProvider.swift in Sources */,
 				2210DB3125026FAA00459603 /* MySharesDatabase.swift in Sources */,
 				2210DB2625026B7F00459603 /* LatestPriceRow.swift in Sources */,
 				2210DB2825026BE800459603 /* LatestPriceHeader.swift in Sources */,
-				2210DB1225015D8F00459603 /* SearchView.swift in Sources */,
 				2210DB1425015DB100459603 /* MySharesView.swift in Sources */,
 				2210DB1025015D7E00459603 /* LatestPriceView.swift in Sources */,
 				2210DB0E25015C5700459603 /* CompanyDetailsView.swift in Sources */,

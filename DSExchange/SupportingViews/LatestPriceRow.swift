@@ -12,32 +12,34 @@ struct LatestPriceRow: View {
     var stock:Stock!
     
     var body: some View {
-        HStack{
+        NavigationLink(destination: CompanyDetailsView(name:stock.TRADING_CODE)){
             HStack{
-                Text(stock.TRADING_CODE)
+                HStack{
+                    Text(stock.TRADING_CODE)
+                    Spacer()
+                }.frame(width: 120)
                 Spacer()
-            }.frame(width: 120)
-            Spacer()
-            Spacer()
-            HStack{
-                Text(stock.LTP)
                 Spacer()
-            }.frame(width: 120)
-            Spacer()
-            HStack{
-                Text(stock.HIGH)
+                HStack{
+                    Text(stock.LTP)
+                    Spacer()
+                }.frame(width: 120)
                 Spacer()
-            }.frame(width: 120)
-            Spacer()
-            HStack{
-                Text(stock.LOW)
+                HStack{
+                    Text(stock.HIGH)
+                    Spacer()
+                }.frame(width: 120)
                 Spacer()
-            }.frame(width: 120)
-            Spacer()
-            HStack{
-                Text(stock.CLOSEP)
+                HStack{
+                    Text(stock.LOW)
+                    Spacer()
+                }.frame(width: 120)
                 Spacer()
-            }.frame(width: 120)
+                HStack{
+                    Text(stock.CLOSEP)
+                    Spacer()
+                }.frame(width: 120)
+            }
         }
     }
 }
