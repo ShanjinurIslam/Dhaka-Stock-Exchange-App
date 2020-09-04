@@ -32,6 +32,15 @@
 		2210DB3C2502800400459603 /* BasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3B2502800400459603 /* BasicInfoView.swift */; };
 		2210DB3E2502825C00459603 /* MarketInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3D2502825C00459603 /* MarketInfoView.swift */; };
 		2210DB40250285F600459603 /* AddShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DB3F250285F600459603 /* AddShareView.swift */; };
+		226489C1250298AA006E5C61 /* MySharesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489C0250298AA006E5C61 /* MySharesRow.swift */; };
+		226489C325029B25006E5C61 /* MySharesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489C225029B25006E5C61 /* MySharesHeader.swift */; };
+		226489C52502A394006E5C61 /* ProfitLossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489C42502A394006E5C61 /* ProfitLossView.swift */; };
+		226489C72502A61E006E5C61 /* SharePriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489C62502A61E006E5C61 /* SharePriceProvider.swift */; };
+		226489C92502A758006E5C61 /* ProfitLossRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489C82502A758006E5C61 /* ProfitLossRow.swift */; };
+		226489CB2502AED9006E5C61 /* CompanyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489CA2502AED9006E5C61 /* CompanyDataProvider.swift */; };
+		226489D02502BCC1006E5C61 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489CF2502BCC1006E5C61 /* GraphView.swift */; };
+		226489D22502BD7F006E5C61 /* CData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226489D12502BD7F006E5C61 /* CData.swift */; };
+		226489D52502C36C006E5C61 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 226489D42502C36C006E5C61 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,14 @@
 		2210DB3B2502800400459603 /* BasicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoView.swift; sourceTree = "<group>"; };
 		2210DB3D2502825C00459603 /* MarketInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInfoView.swift; sourceTree = "<group>"; };
 		2210DB3F250285F600459603 /* AddShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareView.swift; sourceTree = "<group>"; };
+		226489C0250298AA006E5C61 /* MySharesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharesRow.swift; sourceTree = "<group>"; };
+		226489C225029B25006E5C61 /* MySharesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharesHeader.swift; sourceTree = "<group>"; };
+		226489C42502A394006E5C61 /* ProfitLossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLossView.swift; sourceTree = "<group>"; };
+		226489C62502A61E006E5C61 /* SharePriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePriceProvider.swift; sourceTree = "<group>"; };
+		226489C82502A758006E5C61 /* ProfitLossRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLossRow.swift; sourceTree = "<group>"; };
+		226489CA2502AED9006E5C61 /* CompanyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataProvider.swift; sourceTree = "<group>"; };
+		226489CF2502BCC1006E5C61 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		226489D12502BD7F006E5C61 /* CData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2210DB2D25026F8100459603 /* SQLite in Frameworks */,
+				226489D52502C36C006E5C61 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +129,7 @@
 				2210DB0D25015C5600459603 /* CompanyDetailsView.swift */,
 				2210DB0F25015D7E00459603 /* LatestPriceView.swift */,
 				2210DB1325015DB100459603 /* MySharesView.swift */,
+				226489C42502A394006E5C61 /* ProfitLossView.swift */,
 			);
 			path = DSExchange;
 			sourceTree = "<group>";
@@ -130,6 +149,7 @@
 				2210DB20250174A200459603 /* CompanyList.swift */,
 				2210DB322502733B00459603 /* MyShare.swift */,
 				2210DB362502781800459603 /* CompanyDetails.swift */,
+				226489D12502BD7F006E5C61 /* CData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +161,8 @@
 				2210DB22250174FD00459603 /* CompanyListProvider.swift */,
 				2210DB3025026FAA00459603 /* MySharesDatabase.swift */,
 				2210DB34250277FF00459603 /* CompanyDetailsProvider.swift */,
+				226489C62502A61E006E5C61 /* SharePriceProvider.swift */,
+				226489CA2502AED9006E5C61 /* CompanyDataProvider.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +175,10 @@
 				2210DB3B2502800400459603 /* BasicInfoView.swift */,
 				2210DB3D2502825C00459603 /* MarketInfoView.swift */,
 				2210DB3F250285F600459603 /* AddShareView.swift */,
+				226489C0250298AA006E5C61 /* MySharesRow.swift */,
+				226489C225029B25006E5C61 /* MySharesHeader.swift */,
+				226489C82502A758006E5C61 /* ProfitLossRow.swift */,
+				226489CF2502BCC1006E5C61 /* GraphView.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -183,6 +209,7 @@
 			name = DSExchange;
 			packageProductDependencies = (
 				2210DB2C25026F8100459603 /* SQLite */,
+				226489D42502C36C006E5C61 /* SwiftUICharts */,
 			);
 			productName = DSExchange;
 			productReference = 2210DAF32501569E00459603 /* DSExchange.app */;
@@ -214,6 +241,7 @@
 			mainGroup = 2210DAEA2501569E00459603;
 			packageReferences = (
 				2210DB2B25026F8100459603 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				226489D32502C36C006E5C61 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 2210DAF42501569E00459603 /* Products */;
 			projectDirPath = "";
@@ -242,24 +270,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226489C325029B25006E5C61 /* MySharesHeader.swift in Sources */,
 				2210DAF72501569E00459603 /* AppDelegate.swift in Sources */,
 				2210DB332502733B00459603 /* MyShare.swift in Sources */,
+				226489C72502A61E006E5C61 /* SharePriceProvider.swift in Sources */,
 				2210DB3A25027C5400459603 /* ActivityIndicator.swift in Sources */,
 				2210DB172501605E00459603 /* LatestPrice.swift in Sources */,
+				226489C1250298AA006E5C61 /* MySharesRow.swift in Sources */,
 				2210DB40250285F600459603 /* AddShareView.swift in Sources */,
 				2210DAF92501569E00459603 /* SceneDelegate.swift in Sources */,
+				226489C92502A758006E5C61 /* ProfitLossRow.swift in Sources */,
 				2210DB0C25015A0100459603 /* CompanyListView.swift in Sources */,
+				226489D22502BD7F006E5C61 /* CData.swift in Sources */,
 				2210DB21250174A200459603 /* CompanyList.swift in Sources */,
 				2210DB372502781800459603 /* CompanyDetails.swift in Sources */,
 				2210DB3C2502800400459603 /* BasicInfoView.swift in Sources */,
 				2210DB1D250162A100459603 /* LatestPriceProvider.swift in Sources */,
 				2210DB3E2502825C00459603 /* MarketInfoView.swift in Sources */,
 				2210DB35250277FF00459603 /* CompanyDetailsProvider.swift in Sources */,
+				226489C52502A394006E5C61 /* ProfitLossView.swift in Sources */,
 				2210DB3125026FAA00459603 /* MySharesDatabase.swift in Sources */,
 				2210DB2625026B7F00459603 /* LatestPriceRow.swift in Sources */,
 				2210DB2825026BE800459603 /* LatestPriceHeader.swift in Sources */,
 				2210DB1425015DB100459603 /* MySharesView.swift in Sources */,
 				2210DB1025015D7E00459603 /* LatestPriceView.swift in Sources */,
+				226489D02502BCC1006E5C61 /* GraphView.swift in Sources */,
+				226489CB2502AED9006E5C61 /* CompanyDataProvider.swift in Sources */,
 				2210DB0E25015C5700459603 /* CompanyDetailsView.swift in Sources */,
 				2210DB23250174FD00459603 /* CompanyListProvider.swift in Sources */,
 				2210DAFB2501569E00459603 /* ContentView.swift in Sources */,
@@ -472,6 +508,14 @@
 				minimumVersion = 0.12.2;
 			};
 		};
+		226489D32502C36C006E5C61 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -479,6 +523,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2210DB2B25026F8100459603 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
+		};
+		226489D42502C36C006E5C61 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 226489D32502C36C006E5C61 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

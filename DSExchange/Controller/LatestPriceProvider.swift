@@ -10,9 +10,11 @@ import Foundation
 
 class LatestPriceProvider:ObservableObject{
     @Published var stocks: Stocks = Stocks()
+    @Published var loaded:Bool = false
     
     func getLatestPrices(){
         let latest_price_api_url:String = "https://dsexchange.herokuapp.com/api/latest_price"
+        print(latest_price_api_url)
         
         let url = URL(string: latest_price_api_url)!
         
@@ -24,6 +26,7 @@ class LatestPriceProvider:ObservableObject{
                 if let decoded = try? JSONDecoder().decode(Stocks.self,from: data){
                     DispatchQueue.main.async {
                         self.stocks = decoded
+                        self.loaded = true
                     }
                     return
                 }

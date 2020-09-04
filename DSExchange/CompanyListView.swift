@@ -12,19 +12,33 @@ struct CompanyListView: View {
     @ObservedObject var provider:CompanyListProvider = CompanyListProvider()
     
     func onLoad(){
-        provider.getAllCompanies()
+        if(!provider.loaded){
+            provider.getAllCompanies()
+        }
     }
     
     var body: some View {
         List{
-            ForEach(provider.companies) {company in
-                NavigationLink(destination:CompanyDetailsView(name:company.name)){
-                    Text(company.name)
+            if(provider.loaded){
+                ForEach(provider.companies) {company in
+                    NavigationLink(destination:CompanyDetailsView(name:company.name)){
+                        Text(company.name)
+                    }
                 }
+            }
+            else{
+                EmptyView()
             }
         }
         .onAppear(perform: onLoad)
+        .animation(.spring())
         .navigationBarTitle("List of Companies")
+        .navigationBarItems(trailing: self.provider.loaded ? Button("Reload"){
+            self.provider.loaded = false
+            self.provider.getAllCompanies()
+        } : Button(""){
+            
+        })
     }
 }
 

@@ -9,7 +9,16 @@
 import SwiftUI
 
 struct CompanyDetailsView: View {
+    let types = ["price","vol","ttg"]
+    let showing_types = ["Price","Volume","Total Trade Graph"]
+    let durations = ["1","3","6","9","12","24"]
+    
+    
+    @State var type:Int = 0
+    @State var duration:Int = 0
+    
     @State var addFlag:Bool = false
+    @State var showGraph:Bool = false
     @ObservedObject var provider:CompanyDetailsProvider = CompanyDetailsProvider()
     var name:String
     
@@ -20,19 +29,44 @@ struct CompanyDetailsView: View {
     var body: some View {
         VStack(alignment: provider.isLoading ? .center : .leading){
             if(provider.isLoading){
-                ActivityIndicator(isLoading: $provider.isLoading)
+                ActivityIndicator()
             }
             else{
-                HStack{
-                    Text("Market Information").bold().font(.title)
-                    Spacer()
-                }.padding()
-                MarketInfoView(marketInfo: provider.companyDetails.market_info).padding()
-                HStack{
-                    Text("Basic Information").bold().font(.title)
-                    Spacer()
-                }.padding()
-                BasicInfoView(basicInfo: provider.companyDetails.basic_info).padding()
+                Form{
+                    HStack{
+                        Text("Market Information").bold().font(.title)
+                        Spacer()
+                    }.padding()
+                    MarketInfoView(marketInfo: provider.companyDetails.market_info).padding()
+                    HStack{
+                        Text("Basic Information").bold().font(.title)
+                        Spacer()
+                    }.padding()
+                    BasicInfoView(basicInfo: provider.companyDetails.basic_info).padding()
+                
+                    Section(header:Text("Graph Type")){
+                        Picker("",selection:self.$type){
+                            ForEach(0 ..< showing_types.count,id:\.self) {
+                                Text("\(self.showing_types[$0])")
+                            }
+                        }
+                        .labelsHidden()
+                        .pickerStyle(SegmentedPickerStyle())
+                    }
+                    Section(header:Text("Duration (Months)")){
+                        Picker("",selection:self.$duration){
+                            ForEach(0 ..< durations.count,id:\.self) {
+                                Text("\(self.durations[$0])")
+                            }
+                        }
+                        .labelsHidden()
+                        .pickerStyle(SegmentedPickerStyle())
+                    }
+                    
+                    Button("View"){
+                        self.showGraph = true
+                    }
+                }
                 Spacer()
             }
         }
@@ -40,6 +74,11 @@ struct CompanyDetailsView: View {
             self.addFlag = false
         }){
             AddShareView(companyName:self.name,dispose: self.$addFlag)
+        }
+        .sheet(isPresented: self.$showGraph, onDismiss: {
+            self.showGraph = false
+        }){
+            GraphView(name:self.name,type: self.types[self.type],duration: self.durations[self.duration], show_type: self.showing_types[self.type])
         }
         .onAppear(perform:onLoad)
         .navigationBarTitle(name)

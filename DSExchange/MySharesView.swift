@@ -12,27 +12,23 @@ struct MySharesView: View {
     @State var myShares:[MyShare] = [MyShare]()
     
     func onLoad(){
-        myShares.append(contentsOf: MySharesDatabase.shared.getMyShares())
+        let temp:[MyShare] = MySharesDatabase.shared.getMyShares()
+        DispatchQueue.main.async {
+            self.myShares = temp
+        }
     }
     
     var body: some View {
-        VStack{
+        List{
+            MySharesHeader()
             ForEach(self.myShares,id: \.self.id){myShare in
-                HStack{
-                    Text(myShare.instrument)
-                    Spacer()
-                    Text(String(myShare.total))
-                    Spacer()
-                    Text(String(myShare.saleable))
-                    Spacer()
-                    Text(String(myShare.cost))
-                    Spacer()
-                    Text(String(myShare.totalcost))
-                }.padding()
+                NavigationLink(destination:ProfitLossView(myShare: myShare)){
+                    MySharesRow(myShare: myShare)
+                }
             }
         }
         .onAppear(perform: onLoad)
-        .navigationBarTitle("My Shares")
+        .navigationBarTitle("My Shares",displayMode: .large)
     }
 }
 

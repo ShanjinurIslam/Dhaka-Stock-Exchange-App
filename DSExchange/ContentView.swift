@@ -14,19 +14,19 @@ struct ContentView: View {
             List{
                 NavigationLink(destination:LatestPriceView()){
                     HStack{
-                        Text("Latest Price").foregroundColor(.white)
+                        Text("Latest Price")
                         Spacer()
                     }.padding()
                 }
                 NavigationLink(destination:MySharesView()){
                     HStack{
-                        Text("My Shares").foregroundColor(.white)
+                        Text("My Shares")
                         Spacer()
                     }.padding()
                 }
                 NavigationLink(destination:CompanyListView()){
                     HStack{
-                        Text("View all").foregroundColor(.white)
+                        Text("View all")
                         Spacer()
                     }.padding()
                 }
